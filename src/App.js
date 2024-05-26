@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from "react";
 
-const FetchData = () => {
+const App = () => {
   const [data, setData] = useState(null);
 
   useEffect(() => {
     fetch("http://52.15.69.68/test")
+      // fetch("http://localhost:8000/test")
       .then((response) => response.json())
       .then((data) => setData(data))
       .catch((error) => console.error("Error fetching data:", error));
@@ -18,7 +19,7 @@ const FetchData = () => {
   );
 };
 
-export default FetchData;
+export default App;
 
 // import React from "react";
 // import logo from "./logo.svg";
